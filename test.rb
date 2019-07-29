@@ -16,7 +16,7 @@ server = WEBrick::HTTPServer.new({
 }
 
 # WEBrick::HTTPServlet::FileHandlerをWEBrick::HTTPServlet::ERBHandlerに変更する
-server.mount('/webkadai', WEBrick::HTTPServlet::ERBHandler, 'webkadai.html.erb')
+server.mount('/', WEBrick::HTTPServlet::ERBHandler, 'webkadai.html.erb')
 
 server.mount('/test', WEBrick::HTTPServlet::ERBHandler, 'test.html.erb')
 
